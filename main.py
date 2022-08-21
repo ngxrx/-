@@ -9,11 +9,11 @@ import random
 today = datetime.now()
 start_date = os.environ['START_DATE']
 city = os.environ['CITY']
-
+birthday = os.environ['BIRTHDAY']
 
 app_id = os.environ["APP_ID"]
 app_secret = os.environ["APP_SECRET"]
-birthday = os.environ['BIRTHDAY']
+
 user_id = os.environ["USER_ID"]
 template_id = os.environ["TEMPLATE_ID"]
 
