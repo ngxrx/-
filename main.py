@@ -78,7 +78,7 @@ else:
   works = get_words()
 current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 data = {
-        "date": {"value": current_time, "color": get_random_color()},
+        "date": {"value": data_dict['date'], "color": get_random_color()},
         "city": {"value": city, "color": get_random_color()},
         "weather": {"value": data_dict['weather'], "color": get_random_color()},
         "low": {"value": int(data_dict['low']), "color": get_random_color()},
