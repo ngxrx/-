@@ -73,7 +73,7 @@ client = WeChatClient(app_id, app_secret)
 wm = WeChatMessage(client)
 get_weather()
 if '雨' in data_dict['weather']:
-  works = '''{0}\n{1} '''.format("今天有雨，出门记得带伞哦", get_words())
+  works = "今天有雨，出门记得带伞哦"
 else:
   works = ""
 current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
