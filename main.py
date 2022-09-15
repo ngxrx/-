@@ -56,7 +56,7 @@ def get_birthday():
   next = datetime.strptime(str(date.today().year) + "-" + birthday, "%Y-%m-%d")
   if next < datetime.now():
     next = next.replace(year=next.year + 1)
-  return (next - today).days
+  return (next - today).days+1
 
 def get_words():
   words = requests.get("https://api.shadiao.pro/chp")
@@ -72,11 +72,7 @@ client = WeChatClient(app_id, app_secret)
 
 wm = WeChatMessage(client)
 get_weather()
-works = ""
-if '雨' in data_dict['weather']:
-    works = '''{0}\n{1} '''.format("今天有雨，出门记得带伞哦", get_words())
-else:
-    works = get_words()
+works = get_words()
 current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 data = {
         "date": {"value": data_dict['date'], "color": get_random_color()},
